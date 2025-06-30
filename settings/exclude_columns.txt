@@ -1,0 +1,11 @@
+# Exclude Columns Configuration
+# This file contains column names that should be excluded from cleaning
+# One column name per line
+# Lines starting with # are comments and will be ignored
+# Empty lines are also ignored
+
+# Example excluded columns:
+# ID
+# timestamp
+# raw_data
+# user_comments

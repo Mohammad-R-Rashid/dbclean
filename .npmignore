@@ -1,0 +1,31 @@
+# Development files
+*.log
+.DS_Store
+.vscode/
+.idea/
+
+# User-specific data and outputs (exclude completely from package)
+data/
+outputs/
+
+# Git and development
+.git/
+.gitignore
+
+# Tests and development tools
+test/
+tests/
+*.test.js
+*.spec.js
+
+# Documentation that's not needed in package
+docs/
+.github/
+
+# Lock files (let users generate their own)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Development dependencies
+node_modules/ 

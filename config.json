@@ -1,0 +1,14 @@
+{
+    "settings__dir": "settings",
+    "settings_exclude_columns_file_path": "exclude_columns.txt",
+    "settings_instructions_file_path": "instructions.txt",
+    "data_dir": "data",
+    "data_cleaned_file_path": "data_cleaned.csv",
+    "data_deduped_file_path": "data_deduped.csv",
+    "data_stitched_file_path": "data_stitched.csv",
+    "outputs_dir": "outputs",
+    "outputs_cleaned_columns_dir": "cleaned_columns",
+    "outputs_architect_output_file": "architect_output.txt",
+    "outputs_cleaner_changes_analysis_file": "cleaner_changes_analysis.html",
+    "outputs_column_mapping_file": "column_mapping.json"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "@dbclean/cli",
+  "version": "1.0.0",
+  "description": "Transform messy CSV data into clean, standardized datasets using AI-powered automation",
+  "main": "index.js",
+  "bin": {
+    "dbclean": "./index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "postinstall": "node scripts/postinstall.js",
+    "prepublishOnly": "echo 'Ready to publish @dbclean/cli'"
+  },
+  "keywords": [
+    "csv",
+    "data-cleaning",
+    "data-processing",
+    "ai",
+    "machine-learning",
+    "data-science",
+    "automation",
+    "cli",
+    "command-line",
+    "data-transformation",
+    "schema-design",
+    "gemini",
+    "dbclean"
+  ],
+  "author": {
+    "name": "DBClean",
+    "email": "contact@dbclean.dev",
+    "url": "https://dbclean.dev"
+  },
+  "license": "MIT",
+  "homepage": "https://dbclean.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohammad-R-Rashid/dbclean.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mohammad-R-Rashid/dbclean/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "index.js",
+    "src/",
+    "scripts/",
+    "settings/",
+    "config.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "axios": "^1.10.0",
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0",
+    "conf": "^14.0.0",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "inquirer": "^12.0.1",
+    "isolation-forest": "^0.0.9",
+    "ora": "^8.2.0",
+    "open": "^9.1.0"
+  }
+}
