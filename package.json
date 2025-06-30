@@ -1,6 +1,6 @@
 {
   "name": "@dbclean/cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Transform messy CSV data into clean, standardized datasets using AI-powered automation",
   "main": "index.js",
   "bin": {
