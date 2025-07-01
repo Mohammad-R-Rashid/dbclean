@@ -1,6 +1,6 @@
 # 🧹 DBClean
 
-**Transform messy CSV data into clean, standardized datasets using AI-powered automation.**
+Transform messy CSV data into clean, standardized datasets using AI-powered automation.
 
 DBClean is a powerful command-line tool that automatically cleans, standardizes, and restructures your CSV data using advanced AI models. Perfect for data scientists, analysts, and anyone working with messy datasets.
 
@@ -31,20 +31,20 @@ your-project/
 
 ## ✨ Features
 
-- 🤖 **AI-Powered Cleaning** - Uses advanced language models to intelligently clean and standardize data
-- 🏗️ **Schema Design** - Automatically creates optimal database schemas from your data
-- 🔍 **Duplicate Detection** - AI-powered duplicate identification and removal
-- 🎯 **Outlier Detection** - Uses Isolation Forest to identify and remove anomalies
-- ✂️ **Data Splitting** - Automatically splits cleaned data into training, validation, and test sets
-- 🔄 **Full Pipeline** - Complete automation from raw CSV to clean, structured data
-- 📊 **Column-by-Column Processing** - Detailed cleaning and standardization of individual columns
-- 🎯 **Model Selection** - Choose from multiple AI models for different tasks
-- 📋 **Custom Instructions** - Guide the AI with your specific cleaning requirements
-- 💰 **Credit-Based Billing** - Pay only for what you use with transparent pricing
+- **🤖 AI-Powered Cleaning** - Uses advanced language models to intelligently clean and standardize data
+- **🏗️ Schema Design** - Automatically creates optimal database schemas from your data
+- **🔍 Duplicate Detection** - AI-powered duplicate identification and removal
+- **🎯 Outlier Detection** - Uses Isolation Forest to identify and remove anomalies
+- **✂️ Data Splitting** - Automatically splits cleaned data into training, validation, and test sets
+- **🔄 Full Pipeline** - Complete automation from raw CSV to clean, structured data
+- **📊 Column-by-Column Processing** - Detailed cleaning and standardization of individual columns
+- **🎯 Model Selection** - Choose from multiple AI models for different tasks
+- **📋 Custom Instructions** - Guide the AI with your specific cleaning requirements
+- **💰 Credit-Based Billing** - Pay only for what you use with transparent pricing
 
 ## 💳 Credit System
 
-DBClean uses a transparent, pay-as-you-go credit system:
+DBClean uses a transparent, pay-as-you-go credit system.
 
 - **Free Tier**: 5 free requests per month for new users
 - **Minimum Balance**: $0.01 required for paid requests
@@ -56,19 +56,29 @@ Check your balance anytime with `dbclean credits` or get a complete overview wit
 
 ## 🚀 Quick Start
 
-### 1. Initialize Your Account
+### 1. Install DBClean
+
+```bash
+npm install -g @dbclean/cli
+```
+
+### 2. Initialize Your Account
+
 ```bash
 dbclean init
 ```
+
 Enter your email and API key when prompted. Don't have an account? Sign up at [dbclean.dev](https://dbclean.dev)
 
-### 2. Verify Setup
+### 3. Verify Setup
+
 ```bash
 dbclean test-auth
 dbclean account
 ```
 
-### 3. Process Your Data
+### 4. Process Your Data
+
 ```bash
 # Place your CSV file as data.csv in your current directory
 dbclean run
@@ -111,7 +121,7 @@ Your cleaned data will be available in `data/data_stitched.csv` 🎉
 
 ## 🔄 Complete Pipeline
 
-The recommended approach is to use the full pipeline:
+The recommended approach is to use the full pipeline with `dbclean run`.
 
 ```bash
 # Basic full pipeline
@@ -134,7 +144,7 @@ dbclean run --skip-preclean --skip-dedupe
 
 1. **Preclean** - Prepares raw CSV by removing problematic characters and formatting
 2. **Architect** - AI analyzes your data structure and creates optimized schema
-3. **Dedupe** - AI identifies and removes duplicate records intelligently  
+3. **Dedupe** - AI identifies and removes duplicate records intelligently
 4. **Cleaner** - AI processes each column to standardize and clean data
 5. **Stitcher** - Combines all improvements into final dataset
 6. **Isosplit** - Removes outliers and splits data for machine learning
@@ -142,16 +152,19 @@ dbclean run --skip-preclean --skip-dedupe
 ## 🎛️ Command Options
 
 ### Model Selection
+
 - `-m <model>` - Use same model for all AI steps
 - `--model-architect <model>` - Specific model for architect step
 - `--model-cleaner <model>` - Specific model for cleaner step
 
 ### Processing Options
+
 - `-x <number>` - Sample size for architect analysis (default: 5)
 - `-i` - Use custom instructions from `settings/instructions.txt`
 - `--input <file>` - Specify input CSV file (default: data.csv)
 
 ### Skip Options
+
 - `--skip-preclean` - Skip data preparation step
 - `--skip-architect` - Skip schema design step
 - `--skip-dedupe` - Skip duplicate detection step
@@ -169,6 +182,7 @@ dbclean run --skip-preclean --skip-dedupe
 | `gemini-1.5-pro` | Large, complex datasets | ⚡ | 💲💲💲 |
 
 ### Model Selection Tips
+
 - **For speed and cost:** Use `gemini-2.0-flash-exp`
 - **For complex, messy data:** Use `gemini-2.0-flash-thinking` for architect
 - **For mixed workloads:** Use different models per step with `--model-architect` and `--model-cleaner`
@@ -180,17 +194,18 @@ dbclean models
 
 ## 📝 Custom Instructions
 
-Create custom cleaning instructions to guide the AI:
+Create custom cleaning instructions to guide the AI.
 
-1. **For architect step:** Use the `-i` flag with a `settings/instructions.txt` file
+1. **For architect step:** Use the `-i` flag with a `settings/instructions.txt` file.
 2. **Example instructions:**
-   ```
-   - Standardize all phone numbers to E.164 format (+1XXXXXXXXXX)
-   - Convert all dates to YYYY-MM-DD format
-   - Normalize company names (remove Inc, LLC, etc.)
-   - Flag any entries with missing critical information
-   - Ensure email addresses are properly formatted
-   ```
+
+```txt
+- Standardize all phone numbers to E.164 format (+1XXXXXXXXXX)
+- Convert all dates to YYYY-MM-DD format
+- Normalize company names (remove Inc, LLC, etc.)
+- Flag any entries with missing critical information
+- Ensure email addresses are properly formatted
+```
 
 ```bash
 dbclean run -i  # Uses instructions from settings/instructions.txt
@@ -199,6 +214,7 @@ dbclean run -i  # Uses instructions from settings/instructions.txt
 ## 💡 Usage Examples
 
 ### Basic Processing
+
 ```bash
 # Process a CSV file with default settings
 dbclean run
@@ -208,6 +224,7 @@ dbclean run --input customer_data.csv
 ```
 
 ### Advanced Processing
+
 ```bash
 # High-quality processing with larger sample
 dbclean run -m "gemini-2.0-flash-thinking" -x 15 -i
@@ -220,6 +237,7 @@ dbclean run --skip-preclean --skip-cleaner --skip-dedupe --skip-isosplit
 ```
 
 ### Individual Steps
+
 ```bash
 # Run architect with custom model and sample size
 dbclean architect -m "gemini-2.0-flash-thinking" -x 10 -i
@@ -234,6 +252,7 @@ dbclean dedupe
 ## 🎯 Best Practices
 
 ### 1. Start Small and Iterate
+
 ```bash
 # Test with small sample first
 dbclean architect -x 3
@@ -243,14 +262,17 @@ dbclean run
 ```
 
 ### 2. Choose the Right Models
+
 ```bash
 # For complex schema design
 dbclean run --model-architect "gemini-2.0-flash-thinking" --model-cleaner "gemini-2.0-flash-exp"
 ```
 
 ### 3. Use Custom Instructions
+
 Create `settings/instructions.txt` with domain-specific requirements:
-```
+
+```txt
 Finance data requirements:
 - Currency amounts in USD format ($X,XXX.XX)
 - Account numbers must be 10-12 digits
@@ -258,6 +280,7 @@ Finance data requirements:
 ```
 
 ### 4. Monitor Your Usage
+
 ```bash
 # Check account status regularly
 dbclean account
@@ -270,28 +293,33 @@ dbclean usage --detailed
 
 ### Common Issues
 
-**Authentication Problems**
+#### Authentication Problems
+
 ```bash
 dbclean init     # Re-enter credentials
 dbclean test-auth # Verify connection
 ```
 
-**Data File Issues**
+#### Data File Issues
+
 - Ensure `data.csv` exists in current directory
 - Use `--input <file>` for different file names
 - Check file permissions and encoding
 
-**API Limits**
+#### API Limits
+
 - Check credit balance: `dbclean credits`
 - View usage: `dbclean usage`
 - Free tier: 5 requests per month, then paid credits required
 
-**Model Availability**
+#### Model Availability
+
 ```bash
 dbclean models   # See available models
 ```
 
 ### Getting Help
+
 ```bash
 dbclean --help              # General help
 dbclean run --help          # Command-specific help
@@ -302,24 +330,22 @@ dbclean help-commands       # Detailed command reference
 
 After processing, you'll have:
 
-- **`data/data_stitched.csv`** - Your final, cleaned dataset
-- **`data/train.csv`** - Training data (70%)
-- **`data/validate.csv`** - Validation data (15%) 
-- **`data/test.csv`** - Test data (15%)
-- **`outputs/cleaner_changes_analysis.html`** - Visual changes report
-- **`outputs/architect_output.txt`** - AI schema analysis
-- **`outputs/column_mapping.json`** - Column transformation details
+- `data/data_stitched.csv` - Your final, cleaned dataset
+- `data/train.csv` - Training data (70%)
+- `data/validate.csv` - Validation data (15%)
+- `data/test.csv` - Test data (15%)
+- `outputs/cleaner_changes_analysis.html` - Visual changes report
+- `outputs/architect_output.txt` - AI schema analysis
+- `outputs/column_mapping.json` - Column transformation details
 
 ## 🤝 Support
 
-- **Documentation:** [dbclean.dev/docs](https://dbclean.dev/docs)
-- **Support:** [dbclean.dev/support](https://dbclean.dev/support)
-- **API Status:** Check real-time status and get your API key
+- [Documentation](https://dbclean.dev/docs)
+- [Support](https://dbclean.dev/support)
+- API Status: Check real-time status and get your API key
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
----
 
 **Ready to clean your data?** Start with `dbclean init` and transform your messy CSV files into pristine datasets! 🚀
