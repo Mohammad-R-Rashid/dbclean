@@ -179,7 +179,7 @@ dbclean run --skip-preclean --skip-dedupe
 |-------|----------|-------|------|
 | `gemini-2.0-flash-exp` | General purpose, fast processing | ⚡⚡⚡ | 💲 |
 | `gemini-2.0-flash-thinking` | Complex data analysis | ⚡⚡ | 💲💲 |
-| `gemini-1.5-pro` | Large, complex datasets | ⚡ | 💲💲💲 |
+| `gemini-2.5-pro` | Large, complex datasets | ⚡ | 💲💲💲 |
 
 ### Model Selection Tips
 
